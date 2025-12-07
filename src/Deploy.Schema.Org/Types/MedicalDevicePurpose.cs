@@ -1,0 +1,17 @@
+﻿using System;
+using System.Text.Json.Serialization;
+
+namespace Deploy.Schema.Org
+{
+    /// <summary>
+    /// Categories of medical devices, organized by the purpose or intended use of the device.
+    /// </summary>
+    public partial class MedicalDevicePurpose : MedicalEnumeration
+    {
+        public MedicalDevicePurpose()
+        {
+            Type = "MedicalDevicePurpose";
+        }
+
+    }
+}

@@ -1,0 +1,19 @@
+﻿using System;
+using System.Text.Json.Serialization;
+
+namespace Deploy.Schema.Org
+{
+    /// <summary>
+    /// A sequential publication of comic stories under a
+    ///     	unifying title, for example "The Amazing Spider-Man" or "Groo the
+    ///     	Wanderer".
+    /// </summary>
+    public partial class ComicSeries : Periodical
+    {
+        public ComicSeries()
+        {
+            Type = "ComicSeries";
+        }
+
+    }
+}

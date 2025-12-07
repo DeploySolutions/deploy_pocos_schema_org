@@ -1,0 +1,17 @@
+﻿using System;
+using System.Text.Json.Serialization;
+
+namespace Deploy.Schema.Org
+{
+    /// <summary>
+    /// A Workers Union (also known as a Labor Union, Labour Union, or Trade Union) is an organization that promotes the interests of its worker members by collectively bargaining with management, organizing, and political lobbying.
+    /// </summary>
+    public partial class WorkersUnion : Organization
+    {
+        public WorkersUnion()
+        {
+            Type = "WorkersUnion";
+        }
+
+    }
+}

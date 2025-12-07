@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="GenerateTypes/GenerateSchemaOrgPocos.csproj" />
+  <Project Path="Deploy.Schema.Org/Deploy.Schema.Org.csproj" />
+</Solution>
