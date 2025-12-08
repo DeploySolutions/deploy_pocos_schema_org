@@ -1,3 +1,4 @@
+using Deploy.LaunchPad.FactoryLite.Actions.GeneratePowerPoint;
 using Deploy.LaunchPad.Util;
 using Deploy.LaunchPad.Util.CommandLine;
 using Deploy.LaunchPad.Util.Methods;
@@ -10,10 +11,9 @@ using System.Threading.Tasks;
 
 namespace Deploy.GenerateSchemaOrgPocos
 {
-    public partial class GenerateSchemaOrgPocosResultValue : LaunchPadMethodResultValueBase
+    public partial class GenerateSchemaOrgPocosResultValue : GenerateSchemaOrgPocosInputValue
     {
         
-        public required string DestinationFolderPath { get; set; }
         
         public GenerateSchemaOrgPocosResultValue()
         {

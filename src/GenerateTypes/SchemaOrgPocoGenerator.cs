@@ -194,6 +194,7 @@ namespace Deploy.GenerateSchemaOrgPocos
             }
             var resultValue = new GenerateSchemaOrgPocosResultValue
             {
+                SourceFilePath = SchemaOrgJsonLdFilePath,
                 DestinationFolderPath = OutputRoot
             };
             var methodResult = new LaunchPadMethodResult<GenerateSchemaOrgPocosResultValue>(resultValue);
