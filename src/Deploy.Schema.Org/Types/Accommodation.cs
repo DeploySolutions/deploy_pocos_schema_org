@@ -6,7 +6,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -20,7 +20,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -30,7 +30,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -40,7 +40,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -50,7 +50,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -60,7 +60,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -70,7 +70,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -80,7 +80,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -90,7 +90,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -100,7 +100,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -110,7 +110,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -120,7 +120,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -130,7 +130,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -140,7 +140,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -150,7 +150,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -160,7 +160,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -170,7 +170,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
@@ -180,7 +180,7 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    /// &lt;br /&gt;&lt;br /&gt;
+    ///
     /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
     /// </summary>
