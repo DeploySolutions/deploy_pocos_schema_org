@@ -18,6 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Deploy.LaunchPad.Util" Version="10.22.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Deploy.Schema.Org\Deploy.Schema.Org.csproj" />
   </ItemGroup>
 

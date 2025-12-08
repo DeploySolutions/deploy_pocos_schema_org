@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Deploy.LaunchPad.Util.Methods;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection.Emit;
 using System.Text;
 using System.Text.Json;
 
-namespace GenerateSchemaOrgPocos
+namespace Deploy.GenerateSchemaOrgPocos
 {
     public record SchemaClassInfo(
         string Id,
@@ -47,7 +48,7 @@ namespace GenerateSchemaOrgPocos
             SchemaOrgNamespace = schemaOrgNamespace;
         }
 
-        public virtual void GenerateTypesFromSchemaLd()
+        public virtual async Task<LaunchPadMethodResult<GenerateSchemaOrgPocosResultValue>> GenerateTypesFromSchemaLdAsync()
         {
 
             using var stream = File.OpenRead(SchemaOrgJsonLdFilePath);
@@ -188,7 +189,12 @@ namespace GenerateSchemaOrgPocos
                 File.WriteAllText(path, code, Encoding.UTF8);
                 Console.WriteLine($"Generated: {fileName}");
             }
-
+            var resultValue = new GenerateSchemaOrgPocosResultValue
+            {
+                DestinationFolderPath = OutputRoot
+            };
+            var methodResult = new LaunchPadMethodResult<GenerateSchemaOrgPocosResultValue>(resultValue);
+            return methodResult;
         }
 
         protected virtual string GenerateClassCode(

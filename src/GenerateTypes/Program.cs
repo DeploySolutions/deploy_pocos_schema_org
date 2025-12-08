@@ -1,7 +1,7 @@
 ﻿// Program.cs
 // Usage: dotnet run -- <path-to-schemaorg-jsonld> <output-folder>
 
-using GenerateSchemaOrgPocos;
+using Deploy.GenerateSchemaOrgPocos;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,7 +15,7 @@ namespace SchemaOrgPocoGen
     internal static class Program
     {
         
-        public static int Main(string[] args)
+        public async static Task<int> Main(string[] args)
         {
             if (args.Length < 2)
             {
@@ -37,8 +37,11 @@ namespace SchemaOrgPocoGen
             Console.WriteLine($"Loading JSON-LD from: {jsonLdPath}");
 
             SchemaOrgPocoGenerator generator = new SchemaOrgPocoGenerator(jsonLdPath, outputRoot);
-            generator.GenerateTypesFromSchemaLd();
-
+            var result = await generator.GenerateTypesFromSchemaLdAsync();
+            if(!result.Succeeded)
+            {
+                return 1;
+            }
             Console.WriteLine("Done.");
             return 0;
         }
