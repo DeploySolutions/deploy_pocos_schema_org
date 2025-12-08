@@ -1,10 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <TargetFrameworks>net10.0</TargetFrameworks>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net10.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Company>Deploy Software Solutions, inc.</Company>
+    <Authors>Nicholas Kellett</Authors>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/DeploySolutions/deploy_pocos_schema_org</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DeploySolutions/deploy_pocos_schema_org</RepositoryUrl>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>1.0.0</Version>
+    <Description>Shared code for LaunchPad framework.</Description>
+    <Copyright>2025 Deploy Software Solutions, inc.</Copyright>
+    <PackageIcon>icon.png</PackageIcon>
+    <RequireLicenseAcceptance>true</RequireLicenseAcceptance>
+    <PackageLicenseExpression>Apache2</PackageLicenseExpression>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +27,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <PackagePath></PackagePath>
+    </Content>
+    <Content Include="LICENSE">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="schemaorg-all-https.jsonld">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
