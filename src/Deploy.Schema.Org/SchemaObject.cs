@@ -13,10 +13,12 @@ namespace Deploy.Schema.Org
     {
         private static readonly JsonSerializerOptions _jsonLdOptions = new()
         {
-            WriteIndented = true,
+            WriteIndented = false,
             PropertyNamingPolicy = null,
             DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
         };
+
+        public const string SchemaOrgVersion = "29.1";
 
         /// <summary>
         /// Gets or sets the JSON-LD context for the Schema.org object.
@@ -47,6 +49,13 @@ namespace Deploy.Schema.Org
             return JsonSerializer.Serialize((object)this, _jsonLdOptions);
             // or: return JsonSerializer.Serialize(this, GetType(), _jsonLdOptions);
         }
+
+        // Optional helper for debugging
+        public string ToPrettyJsonLd()
+            => JsonSerializer.Serialize((object)this, new JsonSerializerOptions(_jsonLdOptions)
+            {
+                WriteIndented = true
+            });
 
         /// <summary>
         /// Writes the JSON-LD representation of this instance to the specified stream.
