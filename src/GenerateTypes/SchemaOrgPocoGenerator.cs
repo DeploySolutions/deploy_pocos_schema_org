@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Reflection.Emit;
 using System.Text;
 using System.Text.Json;
 
@@ -26,7 +28,170 @@ namespace GenerateSchemaOrgPocos
     public partial class SchemaOrgPocoGenerator
     {
 
-        public virtual string GenerateClassCode(
+        public required virtual string SchemaOrgJsonLdFilePath { get; init; } = "./schemaorg-all-https.jsonld";
+        public required virtual string OutputRoot { get; init; } = "../../../../Deploy.Schema.Org/Types";
+        public virtual string SchemaOrgNamespace { get; init; } = "Deploy.Schema.Org";
+
+        [SetsRequiredMembers]
+        public SchemaOrgPocoGenerator(string schemaOrgJsonLdFilePath, string outputRoot)
+        {
+            SchemaOrgJsonLdFilePath = schemaOrgJsonLdFilePath;
+            OutputRoot = outputRoot;
+        }
+
+        [SetsRequiredMembers]
+        public SchemaOrgPocoGenerator(string schemaOrgJsonLdFilePath, string outputRoot, string schemaOrgNamespace)
+        {
+            SchemaOrgJsonLdFilePath = schemaOrgJsonLdFilePath;
+            OutputRoot = outputRoot;
+            SchemaOrgNamespace = schemaOrgNamespace;
+        }
+
+        public virtual void GenerateTypesFromSchemaLd()
+        {
+
+            using var stream = File.OpenRead(SchemaOrgJsonLdFilePath);
+            using var doc = JsonDocument.Parse(stream);
+
+            var root = doc.RootElement;
+            if (!root.TryGetProperty("@graph", out var graph) || graph.ValueKind != JsonValueKind.Array)
+            {
+                Console.WriteLine("Invalid JSON-LD: missing @graph array.");
+            }
+
+            // --- Step 1: Collect data type IDs (Text, Boolean, Date, etc.) ----------
+            var dataTypeIds = new HashSet<string>(StringComparer.Ordinal);
+
+            foreach (var node in graph.EnumerateArray())
+            {
+                if (HasType(node, "schema:DataType"))
+                {
+                    var id = GetString(node, "@id");
+                    if (!string.IsNullOrWhiteSpace(id))
+                        dataTypeIds.Add(id!);
+                }
+            }
+            // Ensure schema:URL is always treated as a primitive datatype (string/Uri)
+            dataTypeIds.Add("schema:URL");
+
+            // --- Step 2: Collect Schema.org classes (non-DataType) -----------------
+            var classesById = new Dictionary<string, SchemaClassInfo>(StringComparer.Ordinal);
+
+            foreach (var node in graph.EnumerateArray())
+            {
+                if (!HasType(node, "rdfs:Class"))
+                    continue;
+
+                var id = GetString(node, "@id");
+                if (string.IsNullOrWhiteSpace(id))
+                    continue;
+
+                if (dataTypeIds.Contains(id!))
+                {
+                    // We'll map these to primitives, not POCOs.
+                    continue;
+                }
+                if (id == "schema:URL")
+                    continue;
+
+                var label = GetString(node, "rdfs:label") ?? ExtractLocalName(id!);
+                var name = SanitizeIdentifier(ToPascalCase(label));
+                var comment = GetString(node, "rdfs:comment");
+
+                string? baseId = null;
+                if (node.TryGetProperty("rdfs:subClassOf", out var subEl))
+                {
+                    if (subEl.ValueKind == JsonValueKind.Object)
+                    {
+                        baseId = GetString(subEl, "@id");
+                    }
+                    else if (subEl.ValueKind == JsonValueKind.Array)
+                    {
+                        // If multiple inheritance, just pick the first listed base.
+                        foreach (var item in subEl.EnumerateArray())
+                        {
+                            var cid = GetString(item, "@id");
+                            if (!string.IsNullOrWhiteSpace(cid))
+                            {
+                                baseId = cid;
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                var info = new SchemaClassInfo(
+                    Id: id!,
+                    Name: name,
+                    Label: label,
+                    Comment: comment,
+                    BaseClassId: baseId);
+
+                classesById[id!] = info;
+            }
+
+            // --- Step 3: Collect properties ---------------------------------------
+            var properties = new List<SchemaPropertyInfo>();
+
+            foreach (var node in graph.EnumerateArray())
+            {
+                if (!HasType(node, "rdf:Property"))
+                    continue;
+
+                var id = GetString(node, "@id");
+                if (string.IsNullOrWhiteSpace(id))
+                    continue;
+
+                var label = GetString(node, "rdfs:label") ?? ExtractLocalName(id!);
+                var propName = SanitizeIdentifier(ToPascalCase(label));
+                var comment = GetString(node, "rdfs:comment");
+
+                var domains = GetIdList(node, "schema:domainIncludes");
+                var ranges = GetIdList(node, "schema:rangeIncludes");
+
+                if (domains.Count == 0)
+                {
+                    // Some properties may not have explicit domain; we can ignore or later attach globally.
+                    continue;
+                }
+
+                var propInfo = new SchemaPropertyInfo(
+                    Id: id!,
+                    Name: propName,
+                    Label: label,
+                    Comment: comment,
+                    DomainIds: domains,
+                    RangeIds: ranges);
+
+                properties.Add(propInfo);
+            }
+
+            // Attach properties to classes
+            foreach (var prop in properties)
+            {
+                foreach (var domainId in prop.DomainIds)
+                {
+                    if (classesById.TryGetValue(domainId, out var cls))
+                    {
+                        cls.Properties.Add(prop);
+                    }
+                }
+            }
+
+            // --- Step 4: Generate each class file ---------------------------------
+            foreach (var kvp in classesById.OrderBy(k => k.Value.Name))
+            {
+                var cls = kvp.Value;
+                var code = GenerateClassCode(cls, classesById, dataTypeIds);
+                var fileName = cls.Name + ".cs";
+                var path = Path.Combine(OutputRoot, fileName);
+                File.WriteAllText(path, code, Encoding.UTF8);
+                Console.WriteLine($"Generated: {fileName}");
+            }
+
+        }
+
+        protected virtual string GenerateClassCode(
             SchemaClassInfo cls,
             IDictionary<string, SchemaClassInfo> classesById,
             ISet<string> dataTypeIds)
@@ -36,7 +201,7 @@ namespace GenerateSchemaOrgPocos
             sb.AppendLine("using System;");
             sb.AppendLine("using System.Text.Json.Serialization;");
             sb.AppendLine();
-            sb.AppendLine("namespace Deploy.Schema.Org");
+            sb.AppendLine($"namespace {SchemaOrgNamespace}");
             sb.AppendLine("{");
 
             if (!string.IsNullOrWhiteSpace(cls.Comment))
@@ -159,7 +324,7 @@ namespace GenerateSchemaOrgPocos
                 yield return line;
         }
 
-        public virtual bool HasType(JsonElement element, string type)
+        protected virtual bool HasType(JsonElement element, string type)
         {
             if (!element.TryGetProperty("@type", out var t))
                 return false;
@@ -176,7 +341,7 @@ namespace GenerateSchemaOrgPocos
             };
         }
 
-        public virtual string? GetString(JsonElement element, string name)
+        protected virtual string? GetString(JsonElement element, string name)
         {
             if (!element.TryGetProperty(name, out var v))
                 return null;
@@ -184,7 +349,7 @@ namespace GenerateSchemaOrgPocos
             return v.ValueKind == JsonValueKind.String ? v.GetString() : null;
         }
 
-        public virtual List<string> GetIdList(JsonElement element, string name)
+        protected virtual List<string> GetIdList(JsonElement element, string name)
         {
             var result = new List<string>();
             if (!element.TryGetProperty(name, out var v))
@@ -217,7 +382,7 @@ namespace GenerateSchemaOrgPocos
             return result;
         }
 
-        public virtual string ExtractLocalName(string id)
+        protected virtual string ExtractLocalName(string id)
         {
             // "schema:Person" -> "Person"
             // "https://schema.org/Person" -> "Person"
@@ -232,7 +397,7 @@ namespace GenerateSchemaOrgPocos
             return idx >= 0 && idx < id.Length - 1 ? id[(idx + 1)..] : id;
         }
 
-        public virtual string ToPascalCase(string raw)
+        protected virtual string ToPascalCase(string raw)
         {
             if (string.IsNullOrWhiteSpace(raw))
                 return raw;
@@ -248,7 +413,7 @@ namespace GenerateSchemaOrgPocos
             return first + rest;
         }
 
-        public virtual string SanitizeIdentifier(string name)
+        protected virtual string SanitizeIdentifier(string name)
         {
             var keywords = new HashSet<string>(StringComparer.Ordinal)
             {
