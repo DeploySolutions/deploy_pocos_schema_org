@@ -5,7 +5,6 @@ namespace Deploy.Schema.Org
 {
     /// <summary>
     /// An intangible item that describes an alignment between a learning resource and a node in an educational framework.
-    /// 
     /// Should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
     /// </summary>
     public partial class AlignmentObject : Intangible
@@ -17,7 +16,6 @@ namespace Deploy.Schema.Org
 
     /// <summary>
     /// An intangible item that describes an alignment between a learning resource and a node in an educational framework.
-    /// 
     /// Should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
     /// </summary>
         [JsonPropertyName("alignmentType")]
@@ -25,7 +23,6 @@ namespace Deploy.Schema.Org
 
     /// <summary>
     /// An intangible item that describes an alignment between a learning resource and a node in an educational framework.
-    /// 
     /// Should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
     /// </summary>
         [JsonPropertyName("educationalFramework")]
@@ -33,7 +30,6 @@ namespace Deploy.Schema.Org
 
     /// <summary>
     /// An intangible item that describes an alignment between a learning resource and a node in an educational framework.
-    /// 
     /// Should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
     /// </summary>
         [JsonPropertyName("targetDescription")]
@@ -41,7 +37,6 @@ namespace Deploy.Schema.Org
 
     /// <summary>
     /// An intangible item that describes an alignment between a learning resource and a node in an educational framework.
-    /// 
     /// Should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
     /// </summary>
         [JsonPropertyName("targetName")]
@@ -49,7 +44,6 @@ namespace Deploy.Schema.Org
 
     /// <summary>
     /// An intangible item that describes an alignment between a learning resource and a node in an educational framework.
-    /// 
     /// Should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
     /// </summary>
         [JsonPropertyName("targetUrl")]

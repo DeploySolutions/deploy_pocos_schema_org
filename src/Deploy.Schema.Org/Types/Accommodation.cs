@@ -6,9 +6,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
     public partial class Accommodation : Place
     {
@@ -20,9 +19,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("accommodationCategory")]
         public virtual string? AccommodationCategory { get; set; }
@@ -30,9 +28,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("accommodationFloorPlan")]
         public virtual FloorPlan? AccommodationFloorPlan { get; set; }
@@ -40,9 +37,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("amenityFeature")]
         public virtual LocationFeatureSpecification? AmenityFeature { get; set; }
@@ -50,9 +46,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("bed")]
         public virtual object? Bed { get; set; }
@@ -60,9 +55,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("floorLevel")]
         public virtual string? FloorLevel { get; set; }
@@ -70,9 +64,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("floorSize")]
         public virtual QuantitativeValue? FloorSize { get; set; }
@@ -80,9 +73,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("leaseLength")]
         public virtual object? LeaseLength { get; set; }
@@ -90,9 +82,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("numberOfBathroomsTotal")]
         public virtual Integer? NumberOfBathroomsTotal { get; set; }
@@ -100,9 +91,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("numberOfBedrooms")]
         public virtual object? NumberOfBedrooms { get; set; }
@@ -110,9 +100,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("numberOfFullBathrooms")]
         public virtual double? NumberOfFullBathrooms { get; set; }
@@ -120,9 +109,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("numberOfPartialBathrooms")]
         public virtual double? NumberOfPartialBathrooms { get; set; }
@@ -130,9 +118,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("numberOfRooms")]
         public virtual object? NumberOfRooms { get; set; }
@@ -140,9 +127,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("occupancy")]
         public virtual QuantitativeValue? Occupancy { get; set; }
@@ -150,9 +136,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("permittedUsage")]
         public virtual string? PermittedUsage { get; set; }
@@ -160,9 +145,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("petsAllowed")]
         public virtual object? PetsAllowed { get; set; }
@@ -170,9 +154,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("tourBookingPage")]
         public virtual string? TourBookingPage { get; set; }
@@ -180,9 +163,8 @@ namespace Deploy.Schema.Org
     /// <summary>
     /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
     /// For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.
-    ///
-    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// 
+    /// See also the &lt;a href="/docs/hotels.html"&gt;dedicated document on the use of schema.org for marking up hotels and other forms of accommodations&lt;/a&gt;.
     /// </summary>
         [JsonPropertyName("yearBuilt")]
         public virtual double? YearBuilt { get; set; }
