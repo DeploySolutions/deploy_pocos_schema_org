@@ -12,7 +12,7 @@
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Description>Shared code for LaunchPad framework.</Description>
+    <Description>Deploy C# POCOs (Plain Old C# Objects) for the Schema.Org types.</Description>
     <Copyright>2025 Deploy Software Solutions, inc.</Copyright>
     <PackageIcon>icon.png</PackageIcon>
     <RequireLicenseAcceptance>true</RequireLicenseAcceptance>
