@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "GenerateSchemaNetPocos": {
-      "commandName": "Project",
-      "commandLineArgs": "./schemaorg-all-https.jsonld ../../../../Deploy.Schema.Org/Types"
-    }
-  }
-}
